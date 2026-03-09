@@ -1,70 +1,101 @@
-# Getting Started with Create React App
+```markdown
+# 🌈 Chroma Weather
+> **A context-aware weather engine** that bridges the gap between atmospheric data and visual emotion.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+[![React](https://img.shields.io/badge/React-18.x-61DAFB?style=for-the-badge&logo=react&logoColor=white)](https://reactjs.org/)
+[![Leaflet](https://img.shields.io/badge/Leaflet-v1.9-199903?style=for-the-badge&logo=leaflet&logoColor=white)](https://leafletjs.org/)
+[![OpenWeather](https://img.shields.io/badge/API-OpenWeather-EB6E4B?style=for-the-badge&logo=openweathermap)](https://openweathermap.org/)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg?style=for-the-badge)](https://opensource.org/licenses/MIT)
 
-## Available Scripts
+---
 
-In the project directory, you can run:
+## 📖 Overview
+**Chroma Weather** non è un semplice aggregatore di dati. È un'applicazione progettata per offrire un feedback visivo immediato. Attraverso un sistema di **Dynamic Contextual Styling**, l'intera interfaccia reagisce alle variazioni termiche, trasformando i dati grezzi in un'esperienza cromatica immersiva.
 
-### `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+---
 
-### `npm test`
+## 🛠 Tech Stack & Architecture
+L'architettura è basata su una struttura a componenti atomici per massimizzare la riutilizzabilità e le performance:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- **Core Framework:** React 18+ (Functional Components & Hooks).
+- **Data Layer:** Integrazione con OpenWeather API tramite `fetch` asincroni.
+- **Geospatial:** Layer cartografico interattivo con **Leaflet.js**.
+- **Typography:** - `Syne` (700/800) per gli elementi di branding e temperature.
+  - `DM Mono` (400/500) per la precisione metrica.
+- **Dynamic CSS:** Variabili CSS iniettate via JavaScript per gestire il sistema "Chroma" (gradienti dipendenti dalla temperatura).
 
-### `npm run build`
+---
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## 🚀 Guida all'Installazione
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### 1. Requisiti
+- Node.js (v16.x o superiore)
+- npm o yarn
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### 2. Clonazione e Setup
+```bash
+git clone [https://github.com/MGMarcoGesualdi/MgWeatherAppAPI.git](https://github.com/MGMarcoGesualdi/MgWeatherAppAPI.git)
+cd MgWeatherAppAPI
+npm install
 
-### `npm run eject`
+```
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+### 3. Configurazione API (Sicurezza)
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+*Nota: Al momento l'applicazione richiede la chiave API direttamente nei componenti. Per motivi di sicurezza e per favorire i contributi, si consiglia di non caricare la propria chiave su repository pubblici.*
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+Se desideri testare l'app:
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+* Ottieni la tua API Key su [OpenWeatherMap](https://openweathermap.org/api).
+* Inseriscila nel parametro `apiKey` all'interno dei file `.jsx` in `src/components/`.
 
-## Learn More
+---
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## 📂 Struttura del Progetto
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+```text
+src/
+ ├── assets/            # Media, font locali e loghi
+ ├── components/        # UI Atoms (SearchBar, Card, Forecast, Map)
+ ├── App.jsx            # State Management & Dynamic Logic
+ ├── App.css            # Chroma Styling Engine
+ └── index.js           # Virtual DOM Rendering
 
-### Code Splitting
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+---
 
-### Analyzing the Bundle Size
+## 🗺 Roadmap & Prossimi Step
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+Siamo sempre alla ricerca di miglioramenti. Ecco cosa abbiamo in programma:
 
-### Making a Progressive Web App
+* [ ] **State Management:** Migrazione a Context API o Redux per una gestione più fluida.
+* [ ] **Environment Security:** Implementazione di file `.env` per la gestione delle API Keys.
+* [ ] **Extended Forecast:** Vista settimanale con grafici SVG.
+* [ ] **Dark Mode Sync:** Sincronizzazione automatica con le impostazioni del sistema operativo.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+---
 
-### Advanced Configuration
+## 🤝 Contribuisci al Progetto
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+Siamo aperti a Pull Request! Se vuoi contribuire:
 
-### Deployment
+1. Effettua il **Fork** del repository.
+2. Crea un branch per la tua feature (`git checkout -b feature/NuovaFeature`).
+3. Effettua il commit delle modifiche seguendo le [Conventional Commits](https://www.conventionalcommits.org/).
+4. Apri una **Pull Request** descrivendo i cambiamenti.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+---
 
-### `npm run build` fails to minify
+## 👨‍💻 Autore
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+**Marco Gesualdi**
+
+* GitHub: [@MGMarcoGesualdi](https://www.google.com/search?q=https://github.com/MGMarcoGesualdi)
+* VSCode Marketplace: [MGExtensions](https://marketplace.visualstudio.com/publishers/MGMarcoGesualdi)
+
+---
+
+*Progetto creato a scopo didattico e professionale per l'esplorazione di interfacce dinamiche in React.*
