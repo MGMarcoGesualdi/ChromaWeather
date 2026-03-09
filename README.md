@@ -1,23 +1,27 @@
 ```markdown
 # 🌈 Chroma Weather
-> **A context-aware weather engine that transforms atmospheric data into visual emotion.**
 
-[![React](https://img.shields.io/badge/React-18.x-61DAFB?style=for-the-badge&logo=react&logoColor=white)](https://reactjs.org/)
-[![Leaflet](https://img.shields.io/badge/Leaflet-v1.9-199903?style=for-the-badge&logo=leaflet&logoColor=white)](https://leafletjs.org/)
-[![OpenWeather](https://img.shields.io/badge/API-OpenWeather-EB6E4B?style=for-the-badge&logo=openweathermap)](https://openweathermap.org/)
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg?style=for-the-badge)](https://opensource.org/licenses/MIT)
+**Chroma Weather** is a weather application that transforms atmospheric data into a **visual and interactive experience**.
+
+Rather than presenting weather information as simple numbers, the interface dynamically adapts its **colors, gradients, and visual tone** based on real-time weather conditions.
+
+Through a system called **Dynamic Contextual Styling**, the UI responds to temperature ranges and environmental data, allowing users to **perceive weather conditions visually**.
 
 ---
 
 # 📖 Overview
 
-**Chroma Weather** is not just a weather data viewer.
+The goal of Chroma Weather is to explore how **environmental data can drive dynamic interfaces**.
 
-It is a **visual weather experience** designed to translate atmospheric information into **color-driven UI feedback**.
+Weather information becomes part of the **visual identity of the interface**, creating a more immersive interaction between the user and the data.
 
-Through a system called **Dynamic Contextual Styling**, the interface dynamically reacts to temperature and weather conditions, transforming raw data into an immersive chromatic environment.
+The application integrates:
 
-Instead of simply displaying numbers, the application allows users to **perceive weather conditions visually**.
+- **real-time meteorological data**
+- **dynamic UI color systems**
+- **interactive geospatial visualization**
+
+to produce a weather interface that is both **informative and experiential**.
 
 ---
 
@@ -63,17 +67,6 @@ A custom **Chroma Styling Engine** dynamically injects CSS variables based on we
 # 🏗 Architecture
 
 The project follows a **component-based atomic structure** designed for maintainability and performance.
-
-```
-
-src/
-├── assets/            # Fonts, images and icons
-├── components/        # UI atoms (SearchBar, WeatherCard, Forecast, Map)
-├── App.jsx            # Global state & application logic
-├── App.css            # Chroma Styling Engine
-└── index.js           # React DOM rendering
-
-````
 
 ---
 
@@ -207,7 +200,7 @@ Future improvements planned for the project:
 
 # 🤝 Contributing
 
-Contributions are welcome!
+Contributions are welcome.
 
 If you'd like to contribute:
 
@@ -218,9 +211,7 @@ If you'd like to contribute:
 git checkout -b feature/YourFeature
 ```
 
-3. Commit your changes following **Conventional Commits**
-
-[https://www.conventionalcommits.org/](https://www.conventionalcommits.org/)
+3. Commit your changes with a clear and descriptive message.
 
 4. Push the branch
 
@@ -265,3 +256,5 @@ The goal is to experiment with the intersection between:
 * **environment-aware interfaces**
 
 to create a weather application that is not only informative, but also **experiential**.
+
+```
