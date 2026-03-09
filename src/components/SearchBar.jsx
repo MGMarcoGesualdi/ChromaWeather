@@ -31,9 +31,9 @@ export default function SearchBar({
       const dataF = await resF.json();
 
       onWeather(dataW);
-      setHourly(dataF.list.slice(0, 8)); // Prendiamo le prossime 24 ore (8 slot da 3h)
+      setHourly(dataF.list.slice(0, 8));
 
-      setInput(""); // Puliamo l'input
+      setInput("");
     } catch (err) {
       alert("Città non trovata o errore nel caricamento dei dati.");
       console.error(err);
