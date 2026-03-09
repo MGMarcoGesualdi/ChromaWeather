@@ -7,7 +7,7 @@ import MeteoHeader from "./components/MeteoHeader";
 import logo from "./assets/LogoNuovo.png";
 import "./App.css";
 
-const apiKey = process.env.APP_WEATHER_API_KEY;
+const apiKey = process.env.REACT_APP_WEATHER_API_KEY;
 
 function App() {
   const [weather, setWeather] = useState(null);
