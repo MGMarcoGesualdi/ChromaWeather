@@ -255,5 +255,3 @@ The goal is to experiment with the intersection between:
 * **environment-aware interfaces**
 
 to create a weather application that is not only informative, but also **experiential**.
-
-```
