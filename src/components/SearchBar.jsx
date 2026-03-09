@@ -1,7 +1,7 @@
 import { useState } from "react";
 import "../components/styles/SearchBar.css";
 
-const apiKey = process.env.APP_WEATHER_API_KEY;
+const apiKey = process.env.REACT_APP_WEATHER_API_KEY;
 
 export default function SearchBar({
   onWeather,
