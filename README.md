@@ -1,4 +1,3 @@
-```markdown
 # 🌈 Chroma Weather
 
 **Chroma Weather** is a weather application that transforms atmospheric data into a **visual and interactive experience**.
@@ -92,7 +91,7 @@ npm -v
 
 ```bash
 git clone https://github.com/MGMarcoGesualdi/ChromaWeather.git
-cd MgWeatherAppAPI
+cd ChromaWeather
 ```
 
 ---
