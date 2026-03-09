@@ -3,7 +3,6 @@ import { useEffect } from "react";
 import "leaflet/dist/leaflet.css";
 import L from "leaflet";
 
-// Fix icone (già presente nel tuo codice)
 delete L.Icon.Default.prototype._getIconUrl;
 L.Icon.Default.mergeOptions({
   iconRetinaUrl:
@@ -14,13 +13,11 @@ L.Icon.Default.mergeOptions({
     "https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/images/marker-shadow.png",
 });
 
-// 1. Componente per gestire lo spostamento della visuale
 function RecenterMap({ lat, lon }) {
   const map = useMap();
   useEffect(() => {
-    // flyTo crea un'animazione fluida di spostamento
     map.flyTo([lat, lon], 10, {
-      duration: 1.5, // durata dell'animazione in secondi
+      duration: 1.5,
     });
   }, [lat, lon, map]);
   return null;
