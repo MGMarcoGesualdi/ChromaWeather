@@ -1,0 +1,100 @@
+.search-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+  max-width: 560px;
+}
+
+.input-wrap {
+  flex: 1;
+  position: relative;
+}
+
+.input-icon {
+  position: absolute;
+  left: 14px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 1rem;
+  pointer-events: none;
+  opacity: 0.7; 
+}
+
+.search-input {
+  width: 100%;
+  padding: 14px 14px 14px 42px;
+  background: rgba(15, 23, 42, 0.4); 
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 14px;
+  
+  color: #ffffff !important; 
+  font-family: 'DM Mono', monospace; 
+  font-size: 1rem;
+  
+  outline: none;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(12px);
+  box-sizing: border-box;
+}
+
+.search-input::placeholder {
+  color: rgba(255, 255, 255, 0.4);
+  font-family: 'DM Mono', monospace;
+}
+
+.search-input:focus {
+  border-color: #6366f1;
+  background: rgba(15, 23, 42, 0.6);
+  box-shadow: 0 0 0 4px rgba(99, 102, 241, 0.2);
+}
+
+.btn {
+  border: none;
+  cursor: pointer;
+  font-family: 'DM Mono', monospace; 
+  font-size: 0.95rem;
+  font-weight: 500;
+  border-radius: 14px;
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.btn:not(:disabled):active {
+  transform: scale(0.95); /* Effetto pressione */
+}
+
+.btn-primary {
+  padding: 14px 24px;
+  background: linear-gradient(135deg, #6366f1, #818cf8);
+  color: #fff;
+  font-family: 'Syne', sans-serif; /* Titolo pulsante in Syne */
+  font-weight: 700;
+  box-shadow: 0 4px 15px rgba(99, 102, 241, 0.4);
+  white-space: nowrap;
+}
+
+.btn-ghost {
+  padding: 14px 16px;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: #f1f5f9;
+  font-size: 1.2rem;
+}
+
+/* Spinner migliorato */
+.spinner {
+  width: 18px;
+  height: 18px;
+  border: 3px solid rgba(255, 255, 255, 0.2);
+  border-top-color: #ffffff;
+  border-radius: 50%;
+  animation: spin 0.8s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+}
